@@ -1,0 +1,204 @@
+/* Gallery */
+
+
+/* Desktop */
+
+@import url('https://fonts.googleapis.com/css?family=Orbitron&display=swap');
+
+nav a[href="gallery.html"]{
+    background-color: #000;
+    color: #fff;
+}
+nav a[href="index.html"]{
+    background-color: #fff;
+    color: #000;
+  }
+
+h1 {
+    text-align: center;
+    display: none;
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed; /* Stay in place */
+    z-index: 300; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+.modal-content {
+background-color: #fefefe;
+margin: auto;
+padding: 20px;
+border: 1px solid #888;
+width: 80%;
+}
+
+.close {
+color: #aaaaaa;
+float: right;
+font-size: 28px;
+font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+color: #000;
+text-decoration: none;
+cursor: pointer;
+}
+
+#imageInModal{
+    width: 100%;
+    margin-top:30px;
+}
+
+/* BUTTON */
+
+#boutonContainer{
+    padding-top: 95px;
+    padding-bottom: 25px;
+}
+
+.btn-sort {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: white;
+    cursor: pointer;
+  }
+  
+.btn-sort:hover {
+background-color: #ddd;
+}
+
+.btn-sort.active {
+background-color: #666;
+    color: white;
+}
+
+/* GALLERY */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: min-content;
+    grid-gap: 15px;
+}
+
+.gallery div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* height: 100%; */
+    /* margin: 10px 0px 10px 0px; */
+}
+
+.gallery a {
+    width: 95%;
+    height: 100%;
+    margin: 10px 0px 10px 0px;
+}
+
+.gallery a img {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.gallery p {
+    display: none;
+    width: 85%;
+    margin: 4px 10px 0px 10px;
+    padding: 5px 0px 5px 0px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 47%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color:#fff;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    border-radius: 5px;
+    font-family: "Orbitron", cursive;
+    z-index: 2;
+}
+
+.gallery img:hover {
+    cursor: url(../images/Gallery/goatlogo4_mini-carre.jpg), auto;
+    transform: scale(1.1);
+    opacity: 1;
+    transition-duration: 1s;
+    z-index: 1;
+
+}
+
+.gallery div:hover p {
+    display: inline;
+    cursor: pointer;
+    transition-duration: 1s;
+}
+
+.gallery div p:hover {
+    cursor: url(../images/Gallery/goatlogo4_mini-carre.jpg), auto;
+}
+
+#sport{
+    display: none;
+}
+#cooking{
+    display: none;
+}
+#technology{
+    display: none;
+}
+
+/* Mobile */
+@media (max-width: 961px) {
+    .gallery {
+        margin-top: -107px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .gallery div {
+        width: 90%;
+    }
+
+    .gallery img {
+        width: 80%;
+    }
+
+    .gallery a {
+        display: flex;
+        justify-content: center;
+    }
+
+    .gallery a img {
+        width: 84%;
+    }
+
+    .gallery p {
+        width: 70%;
+        margin: 6px 10px 20px 10px;
+
+    }
+
+}

@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster+Two&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Caveat+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Orbitron&display=swap');
+
+nav a[href="gallery.html"]{
+    background-color: #000;
+    color: #fff;
+}
+nav a[href="index.html"]{
+    background-color: #fff;
+    color: #000;
+  }
+
+.grid-images {
+    padding-top: 95px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 10% 10% 1fr 30%;
+    grid-template-areas: 
+        "image1 title image3"
+        "image1 image4 image3"
+        "image2 image4 image9"
+        "image2 image6 image5"
+        "image7 image7 image5"
+        "image7 image7 image10"
+        ;
+    margin: auto;
+}
+
+.grid-images img {
+    width: 100%;
+    padding: 5px;
+    height: 100%;
+}
+
+.grid-images div h1 {
+    grid-area: title;
+    margin: auto;
+    /* font-family: 'Cormorant Garamond', serif; */
+    /* font-family: 'Bebas Neue', cursive; */
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.grid-images div {   
+    position: relative; 
+}
+
+.grid-images p {
+    display: none;
+
+    position: absolute;
+    top: 50%;
+    left: 51.5%;
+    transform: translate(-50%, -50%);
+    
+    width: 85%;
+    border-radius: 5px;
+    padding: 10px 0;
+    text-align: center;
+
+    font-family: 'Orbitron', sans-serif;
+    color: #fff;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0,0.5);
+}
+
+
+.grid-images div:hover img {
+    opacity: 0.5;
+    cursor: pointer;
+    transition-duration: 1s;
+}
+.grid-images div:hover p {
+    display: inline;
+    cursor: pointer;
+    transition-duration: 1s;
+}
+.grid-images div:nth-of-type(2) img { 
+    height: 100%;
+}
+.grid-images div:nth-of-type(3) img { 
+    height: 100%;
+}
+
+.grid-images div:nth-of-type(9) img { 
+    height: 100%;
+}
+
+.grid-images div:nth-of-type(1) {
+    grid-area: image1;
+}
+
+.grid-images div:nth-of-type(2) {
+    grid-area: image2;
+    height: 100%;
+}
+
+.grid-images div:nth-of-type(3) {
+    grid-area: image3;
+}
+
+.grid-images div:nth-of-type(4) {
+    grid-area: image4;
+    height: 100%;
+}
+
+.grid-images div:nth-of-type(5) {
+    grid-area: image5;
+}
+.grid-images div:nth-of-type(6) {
+    grid-area: image6;
+    height: 100%;
+}
+
+.grid-images div:nth-of-type(7) {
+    grid-area: image7;
+}
+
+.grid-images div:nth-of-type(7) img {
+    height: 100%;
+}
+
+.grid-images div:nth-of-type(8) {
+    grid-area: image8;
+    display: none;
+}
+
+.grid-images div:nth-of-type(9) {
+    grid-area: image9;
+}
+.grid-images div:nth-of-type(10) {
+    grid-area: image10;
+}
+
+
+@media screen and (max-width: 800px){
+    .grid-images{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(10, auto);
+        grid-template-areas: 
+        "image1 title"
+        "image1 image4"
+        "image2 image4"
+        "image2 image4"
+        "image3 image5"
+        "image9 image5"
+        "image9 image6"
+        "image9 image6"
+        "image7 image7"
+        ;
+    }
+
+    .grid-images div h1{
+        text-align: left;
+    }
+
+    .grid-images div:nth-of-type(4) img{
+        height: 100%;
+    }
+
+    .grid-images div:nth-of-type(8) {
+      display: none;
+    }
+
+    .grid-images div:nth-of-type(10) {
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 525px){
+    .grid-images{
+        padding-top: 0px;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 
+        "image1 title"
+        "image1 image4"
+        "image2 image4"
+        "image2 image4"
+        "image3 image5"
+        "image6 image5"
+        "image7 image7"
+        ;
+    }
+    .grid-images p{
+        font-size: 0.8em;
+    }
+
+    .grid-images div h1{
+        font-size: 1.7rem;
+    }
+    
+}

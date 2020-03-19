@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Cabretta">
+    <meta name="description" content="Website of a photograph">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabretta Gallery</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery.css">
+
+</head>
+<body>
+    <header>
+        <img id="logo" src="images/logo/CabretaLogoBlack1.png" alt="Logo Cabretta">
+        <div class="container">
+            <nav class="top-menu">
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li id="darkMode"><a>Dark mode</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- GALLERY -->
+    <h1>Gallery</h1>
+
+    <div id="modalImg" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <img id="imageInModal" src="" alt="">
+        </div>
+    </div>
+
+    <div id="boutonContainer">
+        <button class="btn-sort active" onclick="filterSelection('all')"> Show all</button>
+        <button class="btn-sort" onclick="filterSelection('sport')">Sport</button>
+        <button class="btn-sort" onclick="filterSelection('cooking')">Cooking</button>
+        <button class="btn-sort" onclick="filterSelection('technology')">Technology</button>
+    </div>
+
+    <section id="showAll" class="gallery">
+        <div>
+            <img src="images/Gallery/vie-1.jpeg" alt="People inside metro">
+            <p>Everyday life</p>
+        </div>
+        <div>
+            <img src="images/Gallery/urbex-1.jpeg" alt="Old corridor" >
+            <p>Urbex</p>
+        </div>
+        <div>
+            <img src="images/Gallery/techno-3.jpeg" alt="Integrated circuit" >
+            <p>Technology</p>
+        </div>
+
+        <div>
+            <img src="images/Gallery/sport-1.jpeg" alt="Man swimming in a swimming-pool" >
+            <p>Sport</p>
+        </div>
+        <div>
+            <a href="landscape.html" title="Discover our Lanscapes gallery">
+                <img src="images/Gallery/landscape-10.jpeg" alt="Autumn forest landscape"></a>
+            <p>Mix Pictures</p>
+        </div>
+        <div>
+            <img src="images/Gallery/musique-1.jpeg" alt="Woman playing violin close-up">
+            <p>Music</p>
+        </div>
+        <div>
+            <img src="images/Gallery/archi-2.jpeg" alt="Big building">
+            <p>Architecture</p>
+        </div>
+        <div>
+            <img src="images/Gallery/cuisine-3.jpeg" alt="Appetising plate" title="">
+            <p>Cooking</p>
+        </div>
+        <div>
+            <img src="images/Gallery/culture-2.jpeg" alt="Old asian street" title="">
+            <p>Culture</p>
+        </div>
+    </section>
+
+    <section id="sport" class="gallery">
+        <div>
+            <img src="images/Gallery/vie-1.jpeg" alt="People inside metro">
+        </div>
+        <div>
+            <img src="images/Gallery/urbex-1.jpeg" alt="Old corridor" >
+        </div>
+        <div>
+            <img src="images/Gallery/techno-3.jpeg" alt="Integrated circuit" >
+        </div>
+
+        <div>
+            <img src="images/Gallery/sport-1.jpeg" alt="Man swimming in a swimming-pool" >
+        </div>
+    </section>
+
+    <section id="cooking" class="gallery">
+        <div>
+            <img src="images/gallery/CUISINE/cuisine-1.jpeg" alt="People inside metro">
+        </div>
+        <div>
+            <img src="images/gallery/CUISINE/cuisine-2.jpeg" alt="Old corridor" >
+        </div>
+        <div>
+            <img src="images/gallery/CUISINE/cuisine-3.jpeg" alt="Integrated circuit" >
+        </div>
+        <div>
+            <img src="images/gallery/CUISINE/cuisine-4.jpg" alt="Man swimming in a swimming-pool" >
+        </div>
+    </section>
+
+    <section id="technology" class="gallery">
+        <div>
+            <img src="images/Gallery/vie-1.jpeg" alt="People inside metro">
+        </div>
+        <div>
+            <img src="images/Gallery/urbex-1.jpeg" alt="Old corridor" >
+        </div>
+        <div>
+            <img src="images/Gallery/techno-3.jpeg" alt="Integrated circuit" >
+        </div>
+    </section>
+    
+    <footer class="footer-logo">
+        <div class="solgan">
+            <h2><a href="#" class="solgan_1">Follow beyond the limits</a></h2>
+        </div>
+        <div class="footer_box_two">
+            <figure>
+              <div class="facebook_logo"><a href="https://fr-fr.facebook.com/thomas.paoli.731"><img src="images/logo/facebook_logo.png" alt="facebook_logo" /></a></div>
+            </figure>
+            <figure> 
+              <div class="twitter_logo"><a href="https://twitter.com/chlartige_photo"><img src="images/logo/twitter_logo.png" alt="twitter_logo" /></a></div>
+            </figure>
+            <figure>
+              <div class="instagram_logo"><a href="https://www.instagram.com/airpixels/"><img src="images/logo/instagram_logo.png" alt="instagram_logo" /></a></div>
+            </figure>
+            <figure>  
+              <div class="pinterest_logo"><a href="https://www.pinterest.fr/PortraitPaysage/portrait-corporate/"><img src="images/logo/pinterest_logo.png" alt="pinterest_logo"/></a></div>
+            </figure>
+            <figure>
+              <div class="linkedin_logo"><a href="https://www.linkedin.com/in/thomas-paoli-793a624a/?originalSubdomain=fr"><img src="images/logo/linkedin_logo.png" alt="linkedin_logo" /></a></div>
+            </figure>  
+        </div>
+</footer>
+    <div class="copyright_background">
+       <p>Webstudio BAGJAV © 2020 All rights reserved</p>
+    </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
