@@ -9,6 +9,27 @@
 // }
 
 // littleMessage();
+// ---- LIKE BUTTON -----
+const likeBtn = document.querySelectorAll(".like-btn");
+const dislikeBtn = document.querySelectorAll(".dislike-btn");
+
+function eventDisOrLikeBtn(buttonType){
+    for(let i = 0; i < buttonType.length; i++){
+        buttonType[i].addEventListener('click', function(e){
+            if(e.target.className === "like-btn" || e.target.className === "dislike-btn"){
+                console.log(e.target.className);
+                let nbDisOrLike = e.target.children[1];
+                let convertNbDisOrLike = Number(nbDisOrLike.innerHTML);
+                convertNbDisOrLike === 9 ? convertNbDisOrLike = 9 : convertNbDisOrLike += 1;
+                nbDisOrLike.innerHTML = String(convertNbDisOrLike);
+            }
+        });
+    }
+
+}
+
+eventDisOrLikeBtn(likeBtn);
+eventDisOrLikeBtn(dislikeBtn);
 
 // ---- DARKMODE ----
 const darkMod = document.getElementById("darkMode");
