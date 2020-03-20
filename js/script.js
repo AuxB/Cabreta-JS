@@ -1,10 +1,20 @@
+//MESSAGE
+
+// function littleMessage(){
+//     let name = window.prompt(`Bonjour toi, alors tu as repéré les différents modules JS que j'ai implémenté ?\n
+//     Un indice : #darkmode, #trierLaGallerie, #modalInGallery\n
+//     Au fait, c'est quoi ton prénom ?`);
+    
+//     window.alert(`Bonne naviguation ${name}, et amuses toi!`);
+// }
+
+// littleMessage();
 
 // ---- DARKMODE ----
 const darkMod = document.getElementById("darkMode");
 const logoCabreta = document.getElementById("logo");
 const rootElt = document.documentElement;
 
-logoCabreta.src = "images/logo/CabretaLogoBlack1.png"
 
 darkMod.onclick = function(){
     
@@ -17,7 +27,6 @@ darkMod.onclick = function(){
     }
     sessionStorage.setItem("logo", logoCabreta.src);
     sessionStorage.setItem("colorMod", rootElt.getAttribute('data-theme'));
-
 
 };
 
@@ -72,9 +81,10 @@ const modal = document.getElementById("modalImg");
 const span = document.getElementsByClassName("close")[0];
 const imgInModal = document.getElementById("imageInModal");
 
-sport.addEventListener('click', function(e){
-    console.log(e.target.src);
-    if(e.target.src != undefined){
+document.querySelector("body").addEventListener('click', function(e){
+    console.log(e.target.parentNode.parentNode.id);
+    if(e.target.src != undefined && e.target.parentNode.parentNode.id != "showAll"){
+        //wee screen the modal if we do not be in the the 'Show all' section
         modal.style.display = "block";
         imgInModal.src = e.target.src;
     }
@@ -89,3 +99,4 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
