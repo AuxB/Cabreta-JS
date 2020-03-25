@@ -10,6 +10,7 @@
 
 // littleMessage();
 // ---- LIKE BUTTON -----
+console.log(document.body.scrollTop)
 const likeBtn = document.querySelectorAll(".like-btn");
 const dislikeBtn = document.querySelectorAll(".dislike-btn");
 
