@@ -6,10 +6,11 @@ Link of github page : https://auxb.github.io/Cabreta-JS/
 
 Options :
 - Darkmode in the navbar *(save even if you reloead the page !)*
-![like](https://i.imgur.com/LSuscnz.png)
+![dakmode](https://i.imgur.com/LSuscnz.png)
 - Possibility to like or dislike a blockquote
 ![like](https://i.imgur.com/I0WQvuc.png)
 - You can sort the gallery image !
-![like](https://i.imgur.com/4esCJuZ.png)
+
+![sort gallery](https://i.imgur.com/4esCJuZ.png)
 
 Enjoy
